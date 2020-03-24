@@ -13,7 +13,7 @@ A Django-CRUD api app to ADD/VIEW/UPDATE/DELETE Profiles
    ```sh
    python manage.py runserver
    ```   
-## Routes
+## :link: Routes
 
  ```sh
  http://127.0.0.1:8000/api/profile ['GET','POST']
