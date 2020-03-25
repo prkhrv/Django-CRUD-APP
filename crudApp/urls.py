@@ -21,5 +21,6 @@ urlpatterns = [
     path('',views.home,name="home"),
     path('api/profile/',views.profile_api_view,name="profile_api"),
     path('api/profile/<int:id>',views.profile_api_update),
+    path('api/attendance/user/<int:id>',views.mark_attendance),
     path('api-auth/',include('rest_framework.urls'))
 ]

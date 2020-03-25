@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import datetime
 
 # Create your models here.
 
@@ -13,3 +14,13 @@ class Profile(models.Model):
 
     def __str__(self):
         return self.user_name
+
+class User_Attendance(models.Model):
+    user = models.ForeignKey(Profile,on_delete=models.CASCADE)
+    is_present = models.BooleanField(default=False)
+    present_time = models.DateTimeField(default = datetime.now, blank = True)
+    exit_time = models.DateTimeField(blank=True,null=True)
+
+
+    def __str__(self):
+        return self.user.user_name
